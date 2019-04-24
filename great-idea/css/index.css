@@ -68,8 +68,13 @@ h1, h2, h3, h4, h5 {
 body{
 	max-width: 1024px;
 	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
 }
 
+span.divider{
+	flex-grow:1;
+}
 .navigation{
 	margin-top: 10px;
 	display: flex;
@@ -80,24 +85,27 @@ body{
 nav{
 	width: 72%;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 }
 
-nav a:link {
+a:link {
 	text-decoration: none;
 	color: lightgray;
 }
 
-nav a:hover {
+a:hover {
 	text-decoration: none;
 	font-weight: bold;
 	color: dodgerblue;
 }
 
-nav a:visited {
+a:visited {
 	text-decoration: none;
 	color: limegreen;
 }
+
+
+/* Homepage */
 
 .header-container{
 	margin: 30px 0;
@@ -106,6 +114,7 @@ nav a:visited {
 	align-items: center;
 }
 header{
+	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -121,9 +130,15 @@ header h1 {
 .get-started{
 	border: 1px solid black;
 	padding: 10px 0;
-	width: 50%;
+	width: 150px;
+}
+.get-started a:link{
+	color: black;
 }
 
+.get-started:hover{
+	background-color: dodgerblue;
+}
 .main-content{
 	display: flex;
 	flex-direction: column;
@@ -151,6 +166,57 @@ footer{
 	margin-bottom: 50px;
 }
 
+
+/* Services */
+
 .services-header-img{
 	width: 100%;
+}
+.services-intro{
+	padding: 20px 0;
+}
+section.services-container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+	padding: 40px 0;
+}
+
+div.services-grid{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	background-color: whitesmoke;
+	border: 1px solid black;
+	width: 48%;
+	padding: 20px;
+	margin-bottom: 30px;
+}
+
+div.learn-more{
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 5px;
+	width: 150px;
+	padding: 10px;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	margin: 20px 0;
+}
+
+section.services-facts-text{
+	display: flex;
+
+}
+div.services-facts-text, .services-info-img{
+	width: 49%;
+
+}
+ul.services-facts{
+	padding: 20px 0;
+	list-style-type: disc;
+	list-style-position: inside;
+	line-height: 2;	
 }
